@@ -1,0 +1,33 @@
+/*
+  ./src/scss/framework/modules/_triggers.scss
+  Module des triggers
+ */
+
+//------------------------------------------------------------------------------------------------
+//MODULE VARIABLE
+//------------------------------------------------------------------------------------------------
+$sticked-trigger-top: 1em;
+$sticked-trigger-transition: all 300ms ease-in-out;
+
+//------------------------------------------------------------------------------------------------
+//MODULE SPECIFICATIONS
+//------------------------------------------------------------------------------------------------
+// COMPONENT STICKY & STICKED-----------------------------------
+.sticky {
+  position: sticky;
+  top: $sticked-trigger-top;
+  transition: $sticked-trigger-transition;
+  &.sticked {
+    //
+  }
+}
+
+.elements.sticky {
+  &.sticked {
+    background: $color-neutral-1;
+    padding: 1em;
+    &:after {
+      content: ".sticked";
+    }
+  }
+}

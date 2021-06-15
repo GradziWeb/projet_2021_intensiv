@@ -1,0 +1,164 @@
+/*
+  ./modules/_helper.scss
+  Module des particularity
+ */
+//------------------------------------------------------------------------------------------------
+//VARIABLE PARTICULARITY
+//------------------------------------------------------------------------------------------------
+//ICON
+$icon-font-size: 1.2rem;
+$icon-height: 40px;
+$icon-width: 40px;
+$icon-display: flex;
+$icon-justify-content: center;
+$icon-align-items: center;
+$icon-hover-color: $color-1;
+$icon-border-color: $color-1;
+
+//ICON BORDURE
+$icon-b-border: 2px solid $color-neutral-3;
+$icon-b-border-radius: 50%;
+$icon-b-color: $color-1;
+$icon-b-border-color: $color-1;
+
+//BLOCKQUOTE-----------------------------------------------------------
+$blockquote-font-style: italic;
+$blockquote-padding: 0.5rem 0 0.5rem 2rem;
+$blockquote-border-left: 4px solid $color-neutral-3;
+//BOX------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+// DEFAULT SPECIFICATIONS
+//------------------------------------------------------------------------------------------------
+
+//ICON---------------------------------------------------------------------------
+
+.icon {
+  font-size: $icon-font-size;
+  height: $icon-height;
+  width: $icon-width;
+  display: $icon-display;
+  justify-content: $icon-justify-content;
+  align-items: $icon-align-items;
+
+  &:hover {
+    color: $icon-hover-color;
+    border-color: $icon-border-color;
+  }
+}
+
+.icon-b {
+  font-size: 1em;
+  border: $icon-b-border;
+  border-radius: $icon-b-border-radius;
+  &:hover {
+    color: $icon-b-color;
+    border-color: $icon-b-border-color;
+  }
+}
+
+//BLOCKQUOTE---------------------------------------------------------------
+
+.blockquote,
+blockquote {
+  padding: $blockquote-padding;
+  font-style: $blockquote-font-style;
+  border-left: $blockquote-border-left;
+}
+
+//BOX----------------------------------------------------------------------
+.box {
+  border: 1px solid $color-neutral-3;
+  padding: 1rem;
+}
+
+//IMAGE----------------------------------------------------------------------
+img {
+}
+
+//IMAGE SCALE----------------------------------------------------------------
+.zoom {
+  margin: 2em auto;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.zoom img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.zoom img:hover {
+  transform: scale(1.1);
+}
+
+//COPYRIGHT
+.copyright {
+  margin: 4em;
+  color: $color-neutral-2;
+  a {
+    color: $color-neutral-2;
+    text-decoration: underline dotted;
+  }
+}
+
+//LINE BETWEEN WORDS-----------------------------------------------------------
+.line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid $color-neutral-3;
+}
+
+.line::before {
+  margin-right: 1rem;
+}
+
+.line::after {
+  margin-left: 1rem;
+}
+
+//PAGINATION ------------------------------
+/* 
+! pas terminer 
+*/
+.list-numPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    &:first-of-type a {
+      border-left: 2px solid $color-neutral-3;
+    }
+  }
+  a.numPage {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 0.8rem;
+    font-weight: bold;
+    border-top: 2px solid $color-neutral-3;
+    border-right: 2px solid $color-neutral-3;
+    border-botom: 2px solid $color-neutral-3;
+    &:hover:not(.actif) {
+      background: $color-neutral-3;
+      color: $color-neutral-1;
+    }
+    &.actif {
+      background-color: $color-neutral-3;
+    }
+
+    &-iconRight {
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*
+  ./src/scss/framework/modules/_visibility.scss
+  Module des objets visible*/
+
+//------------------------------------------------------------------------------------------------
+//VISIBILITY HIDE-visible
+//------------------------------------------------------------------------------------------------
+/* 
+? à refaire? 
+*/
+
+@each $size, $values in $screen-sizes {
+  @media screen and (min-width: map-get( $values, "breakpoint")) {
+    //Cache l'element à partir de telle  taille
+    .#{$size}-hide {
+      display: none;
+    }
+    // l'élement devient visible
+    .#{$size}-visible {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/*
+  ./src/scss/app.scss
+    conctruction du css spécifique à l'application 
+ */
+//IMPORT FRAMEWORK
+@import "./gradzwork/scss/index.scss";
+
+// PARTICULARITY OF THIS WEB SITE
+body {
+  //background: radial-gradient(circle at top, $color-2 2%, $color-text 60%);
+  background: radial-gradient(circle at top, $color-2, $color-text 20em);
+}
+
+li {
+  display: list-item;
+}
+p {
+  text-align: justify;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $color-1;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// SITE HEADER
+// ---------------------------------
+.siteHeader {
+  color: $color-neutral-1;
+  margin: 0;
+  position: relative;
+  .headers {
+    h1 {
+      color: $color-neutral-1;
+    }
+    padding: 3em;
+  }
+}
+.siteLogo {
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// ID MENU RESPONSIVE TRIGGER (En attente)
+// -----------------------------------------------------------
+#menuTrigger {
+  cursor: pointer;
+}
+
+#menuTriggered {
+  position: fixed;
+  //widht:;
+  //height:;
+  //top,left,right,bottom?
+  //z-index:;
+  //background:;
+  //....
+}
+
+#menuClose {
+  cursor: pointer;
+  //display:;
+  //margin:;
+  //padding:;
+  //....
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// SITE CONTENT
+// ---------------------------------
+.siteContent {
+  background: $color-neutral-4;
+  padding: 2rem 3rem 2rem 3rem;
+  border-radius: $border-radius-default;
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// SITE FOOTER
+// ---------------------------------
+.siteFooter {
+  background: $color-neutral-1;
+  border-radius: $border-radius-default;
+  .footerForm {
+    padding: 1rem 2rem 1rem 2rem;
+    > * {
+      flex-direction: column;
+    }
+    label,
+    .h4 {
+      color: $color-neutral-2;
+    }
+    textarea {
+      height: 10rem;
+    }
+  }
+  .footerContact {
+    border-left: 0;
+    @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+      border-left: 2px solid $color-neutral-3;
+    }
+    .h4,
+    a,
+    .btn {
+      color: $color-neutral-2;
+    }
+    .contactItem {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      border-left: 0;
+      border-top: 2px solid $color-neutral-3;
+      padding: 1.5rem 2rem 1.5rem 2rem;
+      &:first-child {
+        border-top: 2px solid $color-neutral-3;
+        @media screen and (min-width: map-get($screen-sizes, "l", "breakpoint")) {
+          border-top: 0;
+        }
+      }
+      > * {
+        margin-right: 3em;
+      }
+    }
+    a:not(.icon) {
+      text-decoration: underline dotted;
+    }
+    .icon:hover {
+      color: $color-1;
+    }
+  }
+}

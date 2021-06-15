@@ -1,0 +1,70 @@
+/*
+  ./modules/_menu.scss
+  Module du menu navigation
+ */
+
+//------------------------------------------------------------------------------------------------
+// VARIABLE MENU
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+// DEFAULT SPECIFICATIONS
+//------------------------------------------------------------------------------------------------
+
+// MENU
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background: $color-neutral-2;
+  color: $color-neutral-4;
+  margin: 0;
+  text-transform: uppercase;
+  // LIST MENU NAV
+
+  ul.menu-nav {
+    display: flex;
+    align-content: center;
+
+    li {
+      display: block;
+      padding: 0.5em;
+
+      a {
+        font-size: 0.9rem;
+        color: $color-neutral-1;
+        text-decoration: none;
+        font-family: $font-2;
+        font-weight: 900;
+      }
+      &:hover:not(.actif) {
+        background: $color-neutral-3;
+      }
+      &.actif {
+        color: $color-text;
+        background: $color-neutral-4;
+        &:hover {
+          color: $color-text;
+        }
+      }
+    }
+  }
+  // LIST MENU ICON
+  ul.menu-icon {
+    display: flex;
+    padding: 0.5em;
+    li {
+      display: block;
+      a {
+        display: block;
+        font-size: 1em;
+        color: $color-neutral-1;
+        text-decoration: none;
+        &:hover {
+          color: $color-1;
+        }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------------------

@@ -1,0 +1,72 @@
+/*
+  .modules/_form.scss
+  Module des formulaires
+ */
+
+//------------------------------------------------------------------------------------------------
+//MODULE SPECIFICATIONS
+//------------------------------------------------------------------------------------------------
+//GENERAL-----------------------------------
+/*  input[type="radio"],
+  input[type="checkbox"] {
+    border: solid 5px #212931;
+  }
+*/
+
+form {
+  fieldset {
+    border: 0;
+    padding: 0;
+  }
+  select {
+    padding: 0.8em;
+    border: 2px solid $color-neutral-3;
+  }
+  //TEXT AREA
+  textarea {
+    width: 100%;
+    padding: 0.7rem;
+    height: 15rem;
+    color: $color-text;
+    border: 2px solid $color-neutral-3;
+    &:focus-visible {
+      border: 2px solid $color-1;
+      outline: none;
+      &::placeholder {
+        color: $color-neutral-3;
+      }
+    }
+  }
+  //OPTION CATEGORY
+  option[selected="selected"] {
+    padding: 1em;
+    font-size: 1em;
+    color: $color-text;
+    background: $color-neutral-3;
+  }
+
+  input {
+    font-size: $font-size-default;
+    padding: 0.5em;
+    border: 2px solid $color-neutral-3;
+    &[type="radio"] {
+      margin-top: 2rem;
+      margin-right: 1rem;
+      width: 30px;
+      height: 30px;
+    }
+    &[type="checkbox"] {
+      margin-top: 0.5em;
+      margin-right: 1rem;
+      width: 30px;
+      height: 30px;
+    }
+    &:focus-visible {
+      border: 2px solid $color-1;
+      outline: none;
+      &::placeholder {
+        color: $color-neutral-3;
+      }
+    }
+  }
+}
